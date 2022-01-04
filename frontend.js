@@ -24,7 +24,8 @@ $(function () {
     }
 
     // open connection
-    var connection = new WebSocket('ws://wssimpletest.fr.openode.io');
+    console.log(location.host)
+    var connection = new WebSocket(`wss://${location.host}/`);
 
     connection.onopen = function () {
         // first we want users to enter their names
